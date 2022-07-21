@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head><title>Check Memory Limit</title>
+<script type="text/javascript" src="index.js"></script>
+</head>
+<body><h1>Check Memory Limit</h1>
+<div>
+<input type="button" value="Check Memory by Allocate ArrayBuffer" onclick="checkJsHeap()"><br />
+<input type="button" value="Check Memory by WebAssembly.Memory()" onclick="checkWasm()"><br />
+UserAgent: <span id="useragent"></span><br /><br />
+Device Memory: <span id="DeviceMem">0</span> GB<br />
+Max Memory Record: <span id="MemRec">0</span> MB<br />
+Allocated Memory: <span id="memorysize">0</span> MB<br />
+<div id="jsheap" style="visibility: hidden">
+usedJSHeapSize: <span id="usedJSHeapSize">0</span> MB<br />
+totalJSHeapSize: <span id="totalJSHeapSize">0</span> MB<br />
+jsHeapSizeLimit: <span id="jsHeapSizeLimit">0</span> MB<br />
+</div>
+<span id="status"></span>
+</div>
+</body>
+</html>
